@@ -1,0 +1,28 @@
+#!/bin/bash
+iterator=0
+set -a
+while read line; do
+	if [ $iterator -eq 0 ]; then
+		x_off=$line
+		echo "Wrote l ($line) into x_off ($x_off)"
+	elif [ $iterator -eq 1 ]; then
+		y_off=$line
+		echo "Wrote l ($line) into y_off ($y_off)"
+	elif [ $iterator -eq 2 ]; then
+		x_w=$line
+		echo "Wrote l ($line) into x_w ($x_w)"
+	else
+		y_h=$line
+		echo "Wrote line ($line) into y_h ($y_h)"
+	fi
+	iterator=$((iterator+1))
+done <<< $(gifBox_xy)
+
+echo "dumping"
+echo "$x_off"
+echo "$y_off"
+echo "$x_w"
+echo "$y_h"
+
+echo "ffmpeg -f x11grab -video_size ${x_w}x${y_h} -framerate 30 -i :0.0+${x_off},${y_off} out.mp4"
+ffmpeg -f x11grab -video_size ${x_w}x${y_h} -framerate 30 -i :0.0+${x_off},${y_off} $HOME/$1 
