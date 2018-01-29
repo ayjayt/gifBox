@@ -16,4 +16,5 @@ Hit `ctl+c` to end it!
 
 I live streamed development :-O https://www.youtube.com/watch?v=r3GUO0eDJw8
 
-![image](https://i.imgur.com/7gqzB6T.gif)
+
+<img src="https://i.imgur.com/7gqzB6T.gif" alt="demo" width="400px">
