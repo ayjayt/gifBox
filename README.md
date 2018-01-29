@@ -1,13 +1,17 @@
-## gifBox
+# gifBox
 
-This is the beginning of gifbox
+## Instructions
 
-It must be run from commandline
+You can just type "make" to make the program.
 
-It runs ffmpeg by command line and has to be quit with `ctl+c`
+Then run the program with ./gifBox OUTPUTNAME.mp4
 
-It doesn't include audio
+There is no "make install", you can `cp` both programs to /usr/bin or link them if you want, or just run them locally.
 
-Lots of stuff we can build into this
+### Limitations
+
+You must run it from command line, you cannot change workspaces (if you use i3). No audio support yet.
+
+Hit ctl+c to end it!
 
 I lived streamed development :-O https://www.youtube.com/watch?v=r3GUO0eDJw8

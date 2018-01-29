@@ -1,6 +1,17 @@
 #!/bin/bash
 iterator=0
-set -a
+
+if [ -z "$1" ]; then
+	echo "You must include a filename as an argument \"SOEMTHING.MP4\""
+	exit 1
+fi
+
+if [ -x ./gifBox_xy ]; then
+	XY_GETTER="./gifBox_xy"
+else
+	XY_GETTER="gifBox_xy"
+fi
+
 while read line; do
 	if [ $iterator -eq 0 ]; then
 		x_off=$line
