@@ -15,3 +15,5 @@ You must run it from command line, you cannot change workspaces (if you use i3).
 Hit `ctl+c` to end it!
 
 I live streamed development :-O https://www.youtube.com/watch?v=r3GUO0eDJw8
+
+![image](https://i.imgur.com/7gqzB6T.gif)
