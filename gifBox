@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-if [ -x ./gifBox_xy ]; then
+if [ -x $PWD/gifBox_xy ]; then
 	XY_GETTER="./gifBox_xy"
 else
 	XY_GETTER="gifBox_xy"
@@ -27,7 +27,7 @@ while read line; do
 		echo "Wrote line ($line) into y_h ($y_h)"
 	fi
 	iterator=$((iterator+1))
-done <<< $(gifBox_xy)
+done <<< $(${XY_GETTER})
 
 echo "dumping"
 echo "$x_off"
