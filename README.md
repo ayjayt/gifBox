@@ -4,7 +4,7 @@
 
 You can just type "make" to make the program.
 
-Then run the program with ./gifBox OUTPUTNAME.mp4
+Then run the program with `./gifBox OUTPUTNAME.mp4`
 
 There is no "make install", you can `cp` both programs to /usr/bin or link them if you want, or just run them locally.
 
